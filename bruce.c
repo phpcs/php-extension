@@ -67,10 +67,19 @@ ZEND_FUNCTION(bruce_arr)
 
 }
 
-ZEND_FUNCTION(bruce_echo_string)
+PHP_FUNCTION(bruce_echo_string)
 {
-	char *s = "Hello world!";
-	PHPWRITE(s, strlen(s));
+    char *email, *msg;
+    size_t email_len, msg_len;
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "ss",&msg, &msg_len,&email, &email_len) == FAILURE){
+        RETURN_NULL();
+    }
+    php_printf("接收到的多个参数:\n");
+    PHPWRITE(msg, msg_len);
+	php_printf("!\n");
+    PHPWRITE(email, email_len);
+    php_printf("!\n");
 }
 
 PHP_FUNCTION(confirm_bruce_compiled)

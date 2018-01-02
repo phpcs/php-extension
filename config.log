@@ -30,6 +30,9 @@ uname -v = #46~16.04.1-Ubuntu SMP Mon Dec 4 15:57:59 UTC 2017
 PATH: /home/chengshuo
 PATH: .
 PATH: /home/chengshuo/nodejs/nodev7/bin
+PATH: /home/chengshuo
+PATH: .
+PATH: /home/chengshuo/nodejs/nodev7/bin
 PATH: /home/chengshuo/bin
 PATH: /home/chengshuo/.local/bin
 PATH: /usr/local/sbin
@@ -41,6 +44,10 @@ PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
+PATH: /usr/lib/go-1.8/bin
+PATH: /home/chengshuo/go/bin
+PATH: /home/chengshuo/consul
+PATH: /home/chengshuo/consul-template
 PATH: /usr/lib/go-1.8/bin
 PATH: /home/chengshuo/go/bin
 PATH: /home/chengshuo/consul
