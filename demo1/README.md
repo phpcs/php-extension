@@ -1,4 +1,5 @@
-#添加自定义函数
+# 添加自定义函数
+---
 ```
 1. bruce_foreach_arr　#HashTable遍历 
 2. bruce_arr #接收参数为数组, 添加元素到数组 
