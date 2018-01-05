@@ -1,0 +1,8 @@
+bruce.lo: /home/chengshuo/php-src/ext/bruce/bruce.c
+	$(LIBTOOL) --mode=compile $(CC) -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1 -I. -I/home/chengshuo/php-src/ext/bruce $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/chengshuo/php-src/ext/bruce/bruce.c -o bruce.lo 
+$(phplibdir)/bruce.la: ./bruce.la
+	$(LIBTOOL) --mode=install cp ./bruce.la $(phplibdir)
+
+./bruce.la: $(shared_objects_bruce) $(BRUCE_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_bruce) $(BRUCE_SHARED_LIBADD)
+
